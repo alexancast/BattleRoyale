@@ -1,0 +1,5 @@
+﻿
+public enum DataType 
+{
+    CONNECTION_INFO, TRANSFORM, HIT_INFO, DEATH_INFO, START_GAME
+}
