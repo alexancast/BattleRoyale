@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 522}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 522}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 613, y: 494}
-  m_MaxSize: {x: 18008, y: 14044}
+  m_MinSize: {x: 611, y: 472}
+  m_MaxSize: {x: 18006, y: 14022}
   vertical: 0
-  controlID: 35
+  controlID: 120
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 436
     height: 947
-  m_MinSize: {x: 232, y: 494}
-  m_MaxSize: {x: 10002, y: 14044}
+  m_MinSize: {x: 232, y: 472}
+  m_MaxSize: {x: 10002, y: 14022}
   vertical: 1
-  controlID: 41
+  controlID: 35
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,8 +160,8 @@ MonoBehaviour:
     y: 0
     width: 436
     height: 482
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -241,8 +241,8 @@ MonoBehaviour:
     y: 0
     width: 589
     height: 947
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -280,16 +280,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 870dc2617d266e9459f8da045120f9a9
   m_Gizmos: 1
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.3674555, y: 3.072114, z: 9.0253315}
+    m_Target: {x: 0.0045212475, y: 1.6457634, z: 0.57956594}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 5}
+    m_Value: {x: 0.0045212475, y: 1.6457634, z: 0.57956594}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -318,13 +318,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.06512132, y: 0.4679488, z: -0.034600873, w: -0.88067895}
+    m_Target: {x: -0.14180157, y: 0.76483303, z: -0.18013826, w: -0.60207397}
     speed: 2
-    m_Value: {x: -0.06512132, y: 0.4679488, z: -0.034600873, w: -0.88067895}
+    m_Value: {x: -0.14180015, y: 0.7648254, z: -0.18013646, w: -0.60206795}
   m_Size:
-    m_Target: 10
+    m_Target: 1.531779
     speed: 2
-    m_Value: 26.391657
+    m_Value: 1.531779
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -417,9 +417,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 70fbffff
+      m_SelectedIDs: 32670000
+      m_LastClickedID: 26418
+      m_ExpandedIDs: a612fdffac12fdffb012fdffb212fdffb412fdffb612fdffbc12fdffbe12fdffc012fdffc212fdffd012fdffd212fdffde12fdffe012fdffe212fdffe412fdffe612fdffec12fdfff012fdfff212fdfff812fdfffe12fdff0013fdff0213fdff0613fdff0813fdff0a13fdff0c13fdff1a13fdff1c13fdff3213fdff3613fdff4a13fdff4c13fdff5213fdff5813fdff6c13fdff8e13fdffa613fdff3067000032670000386700003c67000050670000546700005a6700005c670000626700007267000080670000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -482,12 +482,12 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Player/Characters
+    - Assets/Player/Scripts
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Alexander\Desktop\battle_royale\BattleRoyale
+  m_LastProjectPath: C:\Users\Alexander\Desktop\BattleRoyale\BattleRoyale
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -519,7 +519,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 303}
+    scrollPos: {x: 0, y: 543}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: ffffffff0000000006350000d4380000da380000cc3a0000ce3a00002a3b0000cc3c0000a83e00001a410000e24100007a4200001c440000f0440000c6450000da45000036460000

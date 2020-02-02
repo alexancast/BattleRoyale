@@ -26,6 +26,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] private TextMeshProUGUI ammunitionText;
     [SerializeField] private int maxAmmunition = 10;
     [SerializeField] private float pushbackForce;
+    [SerializeField] private float zoomMouseSensitivity;
+    private float regularMouseSensitivity;
 
     [Header("Reloading")]
     [SerializeField] private float reloadTime = 3; 
@@ -42,6 +44,7 @@ public class Weapon : MonoBehaviour
     private AudioSource hitAudioSource;
     private AudioSource reloadAudioSource;
     private int ammunition;
+    private PlayerMovement playerMovement;
 
     public void Start()
     {
@@ -56,6 +59,8 @@ public class Weapon : MonoBehaviour
         shotAudioSources = GetComponents<AudioSource>();
         hitAudioSource = gameObject.AddComponent<AudioSource>();
         reloadAudioSource = gameObject.AddComponent<AudioSource>();
+        playerMovement = player.GetComponent<PlayerMovement>();
+        
     }
 
     public IEnumerator Cooldown()
@@ -91,11 +96,16 @@ public class Weapon : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            player.GetCamera().fieldOfView = 60 / zoom;
+            player.ToggleCamera();
+            regularMouseSensitivity = playerMovement.GetMouseSensitivity();
+            playerMovement.SetMouseSensitivity(zoomMouseSensitivity);
+            player.GetCamera().fieldOfView = zoom;
 
+        } else if (Input.GetMouseButtonUp(1)) {
+            player.ToggleCamera();
+            playerMovement.SetMouseSensitivity(regularMouseSensitivity);
         }
-        else if(Input.GetMouseButtonUp(1))
-            player.GetCamera().fieldOfView = 60;
+      
 
         if (!cooldownActive && !reloading && player.GetAlive())
         {
@@ -157,7 +167,7 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;
 
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit))
+        if (Physics.Raycast(player.GetCamera().transform.position, player.GetCamera().transform.forward, out hit))
         {
             ConnectedPeer hitPeer;
 

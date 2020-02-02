@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Image healthFill;
+    private Camera currentCamera;
+    [SerializeField] private Camera aimCamera;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private GameObject youDiedText;
     [SerializeField] private RespawnUI respawnUI;
@@ -53,12 +55,12 @@ public class Player : MonoBehaviour
     public void Start()
     {
         Debug.Log(gameObject.name + " Has been instantiated");
-        Debug.Break();
         NetCient.instance.SetPlayer(this);
         GameEvent.instance.Spawn(gameObject);
         playerMovement = GetComponent<PlayerMovement>();
         currentHealth = maxHealth;
         hurtAudioSource = gameObject.AddComponent<AudioSource>();
+        currentCamera = playerCamera;
     }
 
     public bool GetAlive() { return alive; }
@@ -122,7 +124,22 @@ public class Player : MonoBehaviour
         GameEvent.instance.LoadPlayer();
     }
 
-    public Camera GetCamera() { return playerCamera; }
+    public Camera GetCamera() { return currentCamera; }
+    public void ToggleCamera()
+    {
+        if(currentCamera == playerCamera)
+        {
+            playerCamera.gameObject.SetActive(false);
+            aimCamera.gameObject.SetActive(true);
+            currentCamera = aimCamera;
+        }
+        else
+        {
+            aimCamera.gameObject.SetActive(false);
+            playerCamera.gameObject.SetActive(true);
+            currentCamera = playerCamera;
+        }
+    }
 
 
 }

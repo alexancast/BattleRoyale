@@ -34,7 +34,7 @@ public class GameEvent : MonoBehaviour
 
     public virtual void RunGame()
     {
-        Instantiate(NetCient.instance.GetCharacter().GetPrefab(), new Vector3(0, 0, 0), Quaternion.identity, null);
+        Instantiate(NetCient.instance.GetCharacter().GetPrefab(), null);
     }
 
     public virtual void Setup()
@@ -53,7 +53,7 @@ public class GameEvent : MonoBehaviour
     public virtual void LoadPlayer()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Instantiate(NetCient.instance.GetCharacter().GetPrefab(), new Vector3(0,0,0), Quaternion.identity, null);
+        Instantiate(NetCient.instance.GetCharacter().GetPrefab(), null);
      
 
 

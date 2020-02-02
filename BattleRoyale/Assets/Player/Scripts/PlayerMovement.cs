@@ -101,6 +101,12 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void SetMouseSensitivity(float mouseSensitivity)
+    {
+        this.mouseSensitivity = mouseSensitivity;
+    }
+    public float GetMouseSensitivity() { return mouseSensitivity; }
+
     public void Jump() {
         velocity = jumpForce * 5;
     }
