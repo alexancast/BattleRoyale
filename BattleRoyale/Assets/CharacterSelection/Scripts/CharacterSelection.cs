@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 public class CharacterSelection : MonoBehaviour
 {
 
@@ -10,6 +11,9 @@ public class CharacterSelection : MonoBehaviour
     [SerializeField] private GameObject heroPanel;
     [SerializeField] private GameObject characterItemPrefab;
     [SerializeField] private Button continueButton;
+    [SerializeField] private Image startTimer;
+    [SerializeField] private float loadTime;
+    [SerializeField] private TextMeshProUGUI timerValue;
 
     private SelectionItem[] selectionItems;
 
@@ -25,13 +29,23 @@ public class CharacterSelection : MonoBehaviour
             selectionItem.SetCharacter(characters[i], this);
         }
 
-        NetCient.instance.SetCharacter(characters[0]);
+        NetClient.instance.SetCharacter(characters[0]);
         StartCoroutine(CountdownToStart());
     }
 
     public IEnumerator CountdownToStart()
     {
-        yield return new WaitForSeconds(20);
+        float currentTime = loadTime;
+
+        startTimer.fillAmount = 1;
+        
+        while (currentTime > 0)
+        {
+            currentTime -= Time.deltaTime;
+            startTimer.fillAmount = currentTime / loadTime;
+            timerValue.text = Mathf.CeilToInt(currentTime).ToString();
+            yield return null;
+        }
         SceneManager.LoadScene("SampleScene");
     }
 

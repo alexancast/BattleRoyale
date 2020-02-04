@@ -8,6 +8,8 @@ public class GameEvent : MonoBehaviour
 
     public static GameEvent instance;
 
+    private GameObject player;
+
     public void Awake()
     {
         if (instance == null)
@@ -34,12 +36,12 @@ public class GameEvent : MonoBehaviour
 
     public virtual void RunGame()
     {
-        Instantiate(NetCient.instance.GetCharacter().GetPrefab(), null);
+        player = Instantiate(NetClient.instance.GetCharacter().GetPrefab(), null);
     }
 
     public virtual void Setup()
     {
-        NetCient.instance.SetGameEvent(this);
+        NetClient.instance.SetGameEvent(this);
         Debug.Log("game event set");
     }
 
@@ -52,8 +54,12 @@ public class GameEvent : MonoBehaviour
 
     public virtual void LoadPlayer()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Instantiate(NetCient.instance.GetCharacter().GetPrefab(), null);
+
+        Player newPlayer = Instantiate(NetClient.instance.GetCharacter().GetPrefab(), null).GetComponent<Player>();
+        NetClient.instance.SetPlayer(newPlayer);
+        Destroy(player);
+        player = newPlayer.gameObject;
+        Spawn(newPlayer.gameObject);
      
 
 

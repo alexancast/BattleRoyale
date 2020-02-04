@@ -26,8 +26,8 @@ public class MostKillsOnTime : GameEvent
     {
         base.RunGame();
 
-        kills = new int[NetCient.instance.GetConnectedPeers().Length];
-        scores = new GameObject[NetCient.instance.GetConnectedPeers().Length];
+        kills = new int[NetClient.instance.GetConnectedPeers().Length];
+        scores = new GameObject[NetClient.instance.GetConnectedPeers().Length];
 
         for (int i = 0; i < kills.Length; i++)
         {
@@ -93,7 +93,7 @@ public class MostKillsOnTime : GameEvent
             Time.timeScale = slowMotionDivider;
             gameFinished.gameObject.SetActive(true);
 
-            if (NetCient.instance.GetPeerIndex() == FindWinner()) {
+            if (NetClient.instance.GetPeerIndex() == FindWinner()) {
 
                 gameFinished.text = "Victory";
                 gameFinished.color = Color.green;
@@ -128,7 +128,7 @@ public class MostKillsOnTime : GameEvent
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        NetCient.instance.DisconnectFromServer();
+        NetClient.instance.DisconnectFromServer();
         gameFinished.gameObject.SetActive(false);
         SceneManager.LoadScene("MainMenu");
     }

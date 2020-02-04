@@ -39,7 +39,7 @@ public class SelectionItem : MonoBehaviour
         characterSelection.DeselectAll();
         selection.SetActive(true);
         characterSelection.EnableContinue();
-        NetCient.instance.SetCharacter(character);
+        NetClient.instance.SetCharacter(character);
 
     }
 

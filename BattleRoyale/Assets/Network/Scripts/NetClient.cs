@@ -7,7 +7,7 @@ using System.Net.Sockets;
 using LiteNetLib.Utils;
 using UnityEngine.SceneManagement;
 
-public class NetCient : MonoBehaviour, INetEventListener
+public class NetClient : MonoBehaviour, INetEventListener
 {
     [Header("Connection info")]
     [SerializeField] private int port = 2500;
@@ -27,7 +27,7 @@ public class NetCient : MonoBehaviour, INetEventListener
     private bool connected;
     private Character selectedCharacter;
 
-    public static NetCient instance;
+    public static NetClient instance;
 
     public void Awake()
     {

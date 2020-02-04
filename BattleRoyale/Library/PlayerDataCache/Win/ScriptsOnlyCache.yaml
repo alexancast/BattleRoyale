@@ -9,7 +9,7 @@ ScriptsOnlyBuild:
     - HealthKit
     - MainMenu
     - MostKillsOnTime
-    - NetCient
+    - NetClient
     - Player
     - PlayerMovement
     - RespawnUI
@@ -41,8 +41,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -144,33 +146,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 11964}
+      Script: {instanceID: 11798}
     - Class: 114
-      Script: {instanceID: 12140}
+      Script: {instanceID: 11966}
     - Class: 114
-      Script: {instanceID: 12146}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 12150}
     - Class: 114
-      Script: {instanceID: 12188}
+      Script: {instanceID: 12180}
     - Class: 114
-      Script: {instanceID: 12484}
+      Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 12590}
+      Script: {instanceID: 12488}
     - Class: 114
-      Script: {instanceID: 13028}
+      Script: {instanceID: 12594}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13032}
     - Class: 114
-      Script: {instanceID: 13164}
+      Script: {instanceID: 13084}
     - Class: 114
-      Script: {instanceID: 13224}
+      Script: {instanceID: 13104}
     - Class: 114
-      Script: {instanceID: 19510}
+      Script: {instanceID: 13106}
     - Class: 114
-      Script: {instanceID: 51198}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 53032}
+      Script: {instanceID: 13232}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -275,31 +277,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11100}
     - Class: 114
-      Script: {instanceID: 11916}
+      Script: {instanceID: 11918}
     - Class: 114
-      Script: {instanceID: 11964}
+      Script: {instanceID: 11966}
     - Class: 114
-      Script: {instanceID: 12146}
+      Script: {instanceID: 12150}
     - Class: 114
-      Script: {instanceID: 12168}
+      Script: {instanceID: 12172}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 12488}
     - Class: 114
-      Script: {instanceID: 12484}
+      Script: {instanceID: 12594}
     - Class: 114
-      Script: {instanceID: 12590}
+      Script: {instanceID: 12878}
     - Class: 114
-      Script: {instanceID: 12874}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 13018}
+      Script: {instanceID: 13032}
     - Class: 114
-      Script: {instanceID: 13028}
+      Script: {instanceID: 13106}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 13164}
+      Script: {instanceID: 13232}
     - Class: 114
-      Script: {instanceID: 13224}
+      Script: {instanceID: 38274}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -392,23 +394,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11916}
+      Script: {instanceID: 11918}
     - Class: 114
-      Script: {instanceID: 11964}
+      Script: {instanceID: 11966}
     - Class: 114
-      Script: {instanceID: 12146}
+      Script: {instanceID: 12150}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 12180}
     - Class: 114
-      Script: {instanceID: 12484}
+      Script: {instanceID: 12488}
     - Class: 114
-      Script: {instanceID: 12590}
+      Script: {instanceID: 12594}
     - Class: 114
-      Script: {instanceID: 13028}
+      Script: {instanceID: 13032}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13106}
     - Class: 114
-      Script: {instanceID: 13224}
+      Script: {instanceID: 13232}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -982,7 +984,7 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
-      Hash: 15cdbbc8fe7d315dc257ab7328405dba
+      Hash: 7c650b510e611753d5245d8328944a3b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Weapon
@@ -1264,6 +1266,12 @@ ScriptsOnlyBuild:
     className: DownloadableSample
   - hash:
       serializedVersion: 2
+      Hash: 6182273b7ad89266a3f3de5eb5c7102e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterSelection
+  - hash:
+      serializedVersion: 2
       Hash: 8216ca00094987954bcf22fd5ccf9bfd
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Cameras
@@ -1336,6 +1344,12 @@ ScriptsOnlyBuild:
     className: TargetFieldOfView
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameEvent
+  - hash:
+      serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1390,12 +1404,6 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 92dfaf33562bbc46dd0e2057a4d1a379
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NetCient
-  - hash:
-      serializedVersion: 2
       Hash: 76b945b547f74d79302f337813e6c0be
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Characters.FirstPerson
@@ -1414,7 +1422,7 @@ ScriptsOnlyBuild:
     className: HandHeldCam
   - hash:
       serializedVersion: 2
-      Hash: 51aadd2ce8b5e6c08d06595a5f72ac9b
+      Hash: 11e16cb4d1e0327e1d71f7cabc82bd7d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1630,10 +1638,22 @@ ScriptsOnlyBuild:
     className: FPSCounter
   - hash:
       serializedVersion: 2
+      Hash: af33d86e194bc849897144f800f53d74
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SelectionItem
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 7ee5929317904dabac3a8aa3b0b2ac84
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Character
   - hash:
       serializedVersion: 2
       Hash: ac6acd886c54c48c599ab5fed5781ea7
@@ -1738,28 +1758,10 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   - hash:
       serializedVersion: 2
-      Hash: 7ee5929317904dabac3a8aa3b0b2ac84
+      Hash: 92dfaf33562bbc46dd0e2057a4d1a379
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Character
-  - hash:
-      serializedVersion: 2
-      Hash: 6bc9b6fa493234989fc55b270825396a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CharacterSelection
-  - hash:
-      serializedVersion: 2
-      Hash: af33d86e194bc849897144f800f53d74
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SelectionItem
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameEvent
+    className: NetClient
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

@@ -183,7 +183,7 @@ public class Weapon : MonoBehaviour
 
                 if(hitPeer.GetPeerIndex() >= 0)
                 {
-                    NetCient.instance.SendPacket(packet);
+                    NetClient.instance.SendPacket(packet);
 
                 }
 

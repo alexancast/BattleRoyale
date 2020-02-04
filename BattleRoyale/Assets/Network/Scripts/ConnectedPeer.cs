@@ -77,9 +77,9 @@ public class ConnectedPeer : MonoBehaviour
     public IEnumerator Respawn()
     {
         yield return new WaitForSeconds(5);
-        ConnectedPeer clone = Instantiate(NetCient.instance.GetPeerPrefab(), transform.position, transform.rotation).GetComponent<ConnectedPeer>();
+        ConnectedPeer clone = Instantiate(NetClient.instance.GetPeerPrefab(), transform.position, transform.rotation).GetComponent<ConnectedPeer>();
         clone.peerIndex = peerIndex;
-        NetCient.instance.SetPeerClone(clone.gameObject, peerIndex);
+        NetClient.instance.SetPeerClone(clone.gameObject, peerIndex);
         Debug.Log(gameObject.name + "Destroyed after respawn coroutine was called in connectedPeer");
         Destroy(gameObject);
     }

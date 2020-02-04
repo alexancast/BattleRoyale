@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] private RespawnUI respawnUI;
     [SerializeField] private Animation skullAnimation;
     [SerializeField] private Special special;
+    [SerializeField] private Animator animator;
 
     [Header("Sound Clips")]
     [SerializeField] private AudioClip hurtClip;
@@ -26,19 +27,20 @@ public class Player : MonoBehaviour
     private AudioSource hurtAudioSource;
     private bool alive = true;
     private PlayerMovement playerMovement;
+    private Transform[] bodypartTransforms;
 
 
     public void SendPosition()
     {
         Vector2 rotation = new Vector2(GetCamera().transform.eulerAngles.x, transform.eulerAngles.y);
         Vector3 inputDirection = playerMovement.GetDirection();
-        TransformPacket transformPacket = new TransformPacket(NetCient.instance.GetPeerIndex(), transform.position, rotation, inputDirection);
-        NetCient.instance.SendPacket(transformPacket);
+        TransformPacket transformPacket = new TransformPacket(NetClient.instance.GetPeerIndex(), transform.position, rotation, inputDirection);
+        NetClient.instance.SendPacket(transformPacket);
     }
 
     public void Update()
     {
-        if (NetCient.instance.GetConnected()) {
+        if (NetClient.instance.GetConnected()) {
             SendPosition();
         }
 
@@ -55,12 +57,19 @@ public class Player : MonoBehaviour
     public void Start()
     {
         Debug.Log(gameObject.name + " Has been instantiated");
-        NetCient.instance.SetPlayer(this);
+        NetClient.instance.SetPlayer(this);
         GameEvent.instance.Spawn(gameObject);
         playerMovement = GetComponent<PlayerMovement>();
-        currentHealth = maxHealth;
         hurtAudioSource = gameObject.AddComponent<AudioSource>();
+        currentHealth = maxHealth;
         currentCamera = playerCamera;
+    }
+
+    public void SetupPlayer()
+    {
+        currentHealth = maxHealth;
+        alive = true;
+
     }
 
     public bool GetAlive() { return alive; }
@@ -79,7 +88,7 @@ public class Player : MonoBehaviour
         if(currentHealth <= 0)
         {
             DeathInfoPacket packet = new DeathInfoPacket(sender.GetPeerIndex(), pushbackForce);
-            NetCient.instance.SendPacket(packet);
+            NetClient.instance.SendPacket(packet);
 
             alive = false;
             playerMovement.ActivateRagdoll();
@@ -121,6 +130,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(5);
         playerMovement.DeactivateRagdoll();
         youDiedText.SetActive(false);
+        SetupPlayer();
         GameEvent.instance.LoadPlayer();
     }
 
