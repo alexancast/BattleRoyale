@@ -13,7 +13,7 @@ namespace BattleRoyaleServer
     public class Server: INetEventListener
     {
 
-        private const int MAX_CONNECTED_PEERS = 2;
+        private const int MAX_CONNECTED_PEERS = 1;
         private NetPeer[] netPeers = new NetPeer[MAX_CONNECTED_PEERS];
 
         private NetManager netManager;

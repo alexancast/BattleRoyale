@@ -643,7 +643,7 @@ MonoBehaviour:
     type: 3}
   continueButton: {fileID: 1152400193}
   startTimer: {fileID: 1836193057}
-  loadTime: 20
+  loadTime: 5
   timerValue: {fileID: 647186684}
 --- !u!4 &541277084 stripped
 Transform:
@@ -1182,7 +1182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1152400192
 RectTransform:
   m_ObjectHideFlags: 0

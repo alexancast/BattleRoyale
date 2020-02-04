@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - Character
     - CharacterSelection
     - ConnectedPeer
+    - Cube
     - GrappleHook
     - GroundCheck
     - HealthKit
@@ -41,10 +42,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -154,9 +153,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12150}
     - Class: 114
-      Script: {instanceID: 12180}
-    - Class: 114
-      Script: {instanceID: 12192}
+      Script: {instanceID: 12190}
     - Class: 114
       Script: {instanceID: 12488}
     - Class: 114
@@ -173,6 +170,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13172}
     - Class: 114
       Script: {instanceID: 13232}
+    - Class: 114
+      Script: {instanceID: 18746}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -285,6 +284,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12172}
     - Class: 114
+      Script: {instanceID: 12298}
+    - Class: 114
       Script: {instanceID: 12488}
     - Class: 114
       Script: {instanceID: 12594}
@@ -300,8 +301,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13172}
     - Class: 114
       Script: {instanceID: 13232}
-    - Class: 114
-      Script: {instanceID: 38274}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -400,8 +399,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12150}
     - Class: 114
-      Script: {instanceID: 12180}
-    - Class: 114
       Script: {instanceID: 12488}
     - Class: 114
       Script: {instanceID: 12594}
@@ -411,6 +408,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13106}
     - Class: 114
       Script: {instanceID: 13232}
+    - Class: 114
+      Script: {instanceID: 18746}
+    - Class: 114
+      Script: {instanceID: 20954}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1446,6 +1447,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 92dfaf33562bbc46dd0e2057a4d1a379
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NetClient
+  - hash:
+      serializedVersion: 2
       Hash: 301f4da7cc3b301c161d089f9d22efed
     assemblyName: Unity.ProBuilder.dll
     namespaceName: UnityEngine.ProBuilder
@@ -1758,10 +1765,10 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   - hash:
       serializedVersion: 2
-      Hash: 92dfaf33562bbc46dd0e2057a4d1a379
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: NetClient
+    className: Cube
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

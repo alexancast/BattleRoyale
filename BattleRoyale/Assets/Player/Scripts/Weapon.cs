@@ -193,6 +193,9 @@ public class Weapon : MonoBehaviour
                 hitUI.Stop();
                 hitUI.Play();
             }
+            else if(hit.collider.GetComponent<IShatterable>() != null){
+                hit.collider.GetComponent<IShatterable>().Shatter(pushbackForce);
+            }
 
         }
 

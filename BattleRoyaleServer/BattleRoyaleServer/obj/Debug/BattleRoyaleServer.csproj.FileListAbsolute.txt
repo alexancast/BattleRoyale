@@ -4,3 +4,9 @@ C:\Users\Alexander\Desktop\BattleRoyaleServer\BattleRoyaleServer\bin\Debug\Battl
 C:\Users\Alexander\Desktop\BattleRoyaleServer\BattleRoyaleServer\obj\Debug\BattleRoyaleServer.csprojAssemblyReference.cache
 C:\Users\Alexander\Desktop\BattleRoyaleServer\BattleRoyaleServer\obj\Debug\BattleRoyaleServer.exe
 C:\Users\Alexander\Desktop\BattleRoyaleServer\BattleRoyaleServer\obj\Debug\BattleRoyaleServer.pdb
+C:\Users\Alexander\Desktop\BattleRoyale\BattleRoyaleServer\BattleRoyaleServer\bin\Debug\BattleRoyaleServer.exe.config
+C:\Users\Alexander\Desktop\BattleRoyale\BattleRoyaleServer\BattleRoyaleServer\bin\Debug\BattleRoyaleServer.exe
+C:\Users\Alexander\Desktop\BattleRoyale\BattleRoyaleServer\BattleRoyaleServer\bin\Debug\BattleRoyaleServer.pdb
+C:\Users\Alexander\Desktop\BattleRoyale\BattleRoyaleServer\BattleRoyaleServer\obj\Debug\BattleRoyaleServer.csprojAssemblyReference.cache
+C:\Users\Alexander\Desktop\BattleRoyale\BattleRoyaleServer\BattleRoyaleServer\obj\Debug\BattleRoyaleServer.exe
+C:\Users\Alexander\Desktop\BattleRoyale\BattleRoyaleServer\BattleRoyaleServer\obj\Debug\BattleRoyaleServer.pdb
