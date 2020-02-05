@@ -13,8 +13,8 @@ namespace BattleRoyaleServer
     public class Server: INetEventListener
     {
 
-        private const int MAX_CONNECTED_PEERS = 1;
-        private NetPeer[] netPeers = new NetPeer[MAX_CONNECTED_PEERS];
+        private int MAX_CONNECTED_PEERS;
+        private NetPeer[] netPeers;
 
         private NetManager netManager;
         private NetDataWriter dataWriter = new NetDataWriter();
@@ -30,6 +30,10 @@ namespace BattleRoyaleServer
 
         public void Run()
         {
+            Console.Write("Enter maximum connections: ");
+            MAX_CONNECTED_PEERS = int.Parse(Console.ReadLine());
+            netPeers = new NetPeer[MAX_CONNECTED_PEERS];
+
             netManager = new NetManager(this);
 
             if (netManager.Start(port)) {
